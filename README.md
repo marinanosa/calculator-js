@@ -28,6 +28,7 @@ De rekenmachine moet aan de volgende technische eisen voldoen:
 * Getallen worden ingevoerd door te drukken op de knoppen van de rekenmachine.
 * De rekenmachine laat bij berekeningen met meer dan 2 cijfers de uitkomst van de tussenstappen zien. 
 * De rekenmachine heeft ondersteuning voor het werken met hele getallen en getallen met decimalen.
+* Je mag geen gebruik maken van het javascript commando `eval` 
 
 ###Bonus
 * Los de afrondingsproblemen bij berekeningen met decimalen op. Voorbeeld van dit probleem is de berekening 0.1 + 0.2 , volgens Javascript is de uitkomst 0.30000000000000004.
