@@ -1,0 +1,80 @@
+calculator:
+- UI
+0-9
++, -, *, /
+clear
+=
+output veld
+.
+- Functionaliteit
+- Optellen
+- Aftrekken
+- Vermenigvuldigen
+- Delen
+- Resultaat tonen: =
+- Tussenstappen tonen
+bereken tussensom op + klik en op - klik
+Wanneer op * klik of / klik: wacht tot = klik OF + of - klik
+
+in quick n dirty semi code:
+if(lastClickedButton == "+" of "-"){
+Voer huidige som uit
+}else{
+Doe eigenlijk gewoon niets
+}
+
+eval mogen we niet gebruiken
+eval wordt gebruikt om een letterlijke string uit te voeren als javascript
+dit is erg hack gevoelig, gaan we dus niet doen.
+Hoe gaan we dan de berekening opbouwen?
+- opbouwen als string en dan parsen
+- in een soort object of array donderen op volgorde van input
+
+
+
+number builder:
+
+variabel toevoegen om een getal te maken om mee te rekenen:
+NumberBuilder (?)
+
+- Scenario 1:
+- klik op getal
+- variabel is leeg
+- addKey ziet getal en voegt toe aan variabel
+- variabel heeft nu een nummer
+- done
+
+Scenario 2:
+- klik op getal
+- variabel heeft al nummer
+- addKey ziet getal en voegt toe aan variabel
+- variabel is nu een groter getal
+
+Scenario 3:
+- klik op punt
+- variabel heeft geen nummer
+- addKey ziet punt en ziet dat variabel geen nummer heeft
+- CRASH!!!!
+
+Scenario 4:
+- klik op punt
+- variabel heeft wel nummer
+- addKey ziet punt en voegt toe aan nummer
+- variabel is nu een decimaal getal
+
+Scenario 5:
+- klik op punt
+- variabel heeft al een punt
+- addKey ziet punt en ziet dat variabel al punt heeft
+- CRASHH!!1!
+
+-------------------------------
+
+
+Scenario 6:
+- klik op operator (+,/,*,-)
+- variabel heeft al nummer
+- addKey herkent operator
+- variabel wordt opgeslagen in array
+- variabel wordt geleegd
+- operator wordt toegevoegd aan array

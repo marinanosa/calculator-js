@@ -1,45 +1,43 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-	<title>First Calculator</title>
-</head>
 
-	<body>
-		<div id="calc-contain">
-			<form name="calculator">
-				<input type="button" value=" C " onclick="calculator.answer.value = ''" /> 
-				<input type="text" name="answer" />	
+	<head>
 
-				<br />
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="calculator.css">
 
-				<input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
-				<input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
-				<input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
-				<input type="button" value=" + " onclick="calculator.answer.value += '+'" />
-
-				<br />
-
-				<input type="button" value=" 4 " onclick="calculator.answer.value += '4'" />
-				<input type="button" value=" 5 " onclick="calculator.answer.value += '5'" />
-				<input type="button" value=" 6 " onclick="calculator.answer.value += '6'" />
-				<input type="button" value=" - " onclick="calculator.answer.value += '-'" />
-
-				<br />
-
-				<input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
-				<input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
-				<input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
-				<input type="button" value=" ÷ " onclick="calculator.answer.value += '÷'" />
-
-				<br />
-
-				<input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
-				<input type="button" value=" . " onclick="calculator.answer.value += '.'" />
-				<input type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" />
-				<input type="button" value=" x " onclick="calculator.answer.value += 'x'" />
+		<title>First Calculator</title>
 	
-		</form>
-	</div>
+	</head>
+	<body>
+		<main id= "calculator">
+			<section id = "top">
+				<span onclick ="emptyScreen();" id="clear">C</span>
+				<section id="screen"></section>
+			</section>
+		
+			<section class="keys">
+				<span onclick ="addNumber(7);">7</span>
+				<span onclick ="addNumber(8);">8</span>
+				<span onclick ="addNumber(9);">9</span>
+				<span class="operator" onclick="addNumber('÷');">÷</span>
+				<span onclick ="addNumber(4);">4</span>
+				<span onclick ="addNumber(5);">5</span>
+				<span onclick ="addNumber(6);">6</span>
+				<span class="operator" onclick="addNumber('-');">-</span>
+				<span onclick ="addNumber(1);">1</span>
+				<span onclick ="addNumber(2);">2</span>
+				<span onclick ="addNumber(3);">3</span>
+				<span class="operator" onclick="addNumber('+');">+</span>
+				<span onclick ="addNumber(0);">0</span>
+				<span onclick ="addNumber('.');">.</span>
+				<span onclick ="calculate();">=</span>
+				<span class="operator" onclick="addNumber('*');">x</span>
+			</section>
+		</main>
+
+		<script type="text/javascript" src="calculator.js"></script>
 
 	</body>
 </html>

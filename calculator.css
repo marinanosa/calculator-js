@@ -1,0 +1,85 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+font-weight: bold;
+font-family: sans-serif;
+font-size: 15px;
+}
+
+html {
+height: 100%;
+}
+
+#calculator {
+width: 325px;
+height: auto;
+margin: 100px auto;
+padding: 20px 20px 10px;
+
+background:#F08080;
+border-radius: 30px;
+box-shadow: 0px 5px, 0px 10px 5px rgba(70,70,70,0.9); 
+}
+
+#top span#clear {
+float: left;
+}
+
+#top #screen {
+height: 40px; 
+width: 212px;
+
+float: right;
+background: rgba(70,70,70,0.6);
+border-radius: 3px;
+box-shadow: inset 0px 5px #000000;
+
+font-size: 20px;
+line-height: 45px;
+color: #ffffff;
+text-align: right;
+letter-spacing: 1px;
+}
+
+.keys, #top {
+overflow: hidden;
+}
+
+.keys span, #top span#clear {
+float: left;
+
+cursor: pointer;
+
+width: 66px;
+height: 40px;
+background-color: #ffffff;
+border-radius: 10px;
+box-shadow: 0px 5px; 
+margin: 0 7px 12px 0;
+line-height: 40px; 
+text-align: center;
+user-select: none;
+}
+
+.keys span.operator {
+margin-right: 0;
+background-color: #891010;
+
+
+}
+
+#top span#clear:hover {
+background-color: #891010;
+color:#ffffff;
+box-shadow: 0px 5px #000000;
+transition: 0.5s;
+}
+
+.keys span:hover {
+background-color: #891010;
+color: #ffffff;
+box-shadow: 0px 5px #000000;
+transition: 0.5s;
+}
