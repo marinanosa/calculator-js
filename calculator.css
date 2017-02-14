@@ -20,7 +20,7 @@ padding: 20px 20px 10px;
 
 background:#F08080;
 border-radius: 30px;
-box-shadow: 0px 5px, 0px 10px 5px rgba(70,70,70,0.9); 
+box-shadow: 0px 5px, 0px 10px 4px rgba(0, 0, 0,0.9); 
 }
 
 #top span#clear {
@@ -32,9 +32,10 @@ height: 40px;
 width: 212px;
 
 float: right;
-background: rgba(70,70,70,0.6);
+background: rgba(0, 0, 0, 0.6);
 border-radius: 3px;
-box-shadow: inset 0px 5px #000000;
+
+box-shadow: inset 0px 4px rgba(0, 0, 0, 0.9);
 
 font-size: 20px;
 line-height: 45px;
@@ -47,16 +48,16 @@ letter-spacing: 1px;
 overflow: hidden;
 }
 
-.keys span, #top span#clear {
+#top span#clear {
 float: left;
 
 cursor: pointer;
 
 width: 66px;
 height: 40px;
-background-color: #ffffff;
+background-color: #881111;
 border-radius: 10px;
-box-shadow: 0px 5px; 
+box-shadow: 0px 4px #000000; 
 margin: 0 7px 12px 0;
 line-height: 40px; 
 text-align: center;
@@ -65,21 +66,59 @@ user-select: none;
 
 .keys span.operator {
 margin-right: 0;
-background-color: #891010;
+background-color: #881111;
 
 
 }
 
 #top span#clear:hover {
-background-color: #891010;
+background-color: #881111;
 color:#ffffff;
-box-shadow: 0px 5px #000000;
 transition: 0.5s;
 }
 
-.keys span:hover {
-background-color: #891010;
+.keys span:hover{
+background-color: #881111;
 color: #ffffff;
-box-shadow: 0px 5px #000000;
 transition: 0.5s;
+}
+
+
+.keys span{
+float: left;
+
+cursor: pointer;
+
+width: 66px;
+height: 40px;
+background-color: #ffffff;
+border-radius: 10px;
+box-shadow: 0px 4px #000000; 
+margin: 0 7px 12px 0;
+line-height: 40px; 
+text-align: center;
+user-select: none;
+}
+
+#calculate{
+background-color: #ec5f5f;
+}
+
+.keys span:active{
+box-shadow: 0px 0px #000000;
+top: 4px;
+  }
+
+.operator span:active{
+
+box-shadow: 0px 0px #000000;
+top: 4px;
+
+}
+
+#top span#clear:active{
+box-shadow: 0px 0px #000000;
+top: 4px;
+
+
 }

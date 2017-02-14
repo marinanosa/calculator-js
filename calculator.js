@@ -6,7 +6,6 @@ var numberBuilder = "";
 function addNumber(number) {
 	if (number >= 0 || number <= 9) {
 		numberBuilder += number;
-		console.log(numberBuilder);
 	}
 
 // Ondersteuning van decimalen
@@ -17,17 +16,27 @@ function addNumber(number) {
 			if (numberBuilder.indexOf(".") === -1) {
 				// Er is geen punt, dus toevoegen!
 				numberBuilder += number;
-				console.log(numberBuilder);
 			}
 		}
 	}
+
+	// Ondersteuning van operators
+	// Je mag pas een operator pushen als numberBuilder niet leeg is, of niet eindigt op een "."
 	else {
 		if (numberBuilder !== "") {
 			inputList.push(numberBuilder);
 			numberBuilder = "";
 		}
-		inputList.push(number);
-		console.log(inputList);
+		// Als er al een operator staat, en je klikt op een nieuwe operator, VERVANGT hij de operator die er al staat.
+		if (inputList.length > 0) {
+			var lastInput = inputList[inputList.length -1];
+			if (lastInput == "+" || lastInput == "-" || lastInput == "*" || lastInput == "/") {
+				inputList.pop();
+			}
+
+			inputList.push(number);
+		}	
+		// zoeken of de laatste input al een operator is.
 	}
 	document.getElementById("screen").innerHTML = inputList.join("")+numberBuilder;
 }
@@ -36,12 +45,10 @@ function emptyScreen(){
 	document.getElementById("screen").innerHTML = ""; 
 	numberBuilder = "";
 	inputList = [""];
-
 }
 
-// Als er al een operator staat, en je klikt op een nieuwe operator, VERVANGT hij de operator die er al staat.
-
-				
-
-// Nu de operators -----------------------------------------------------------------------------------------------------------
-
+function calculate() {
+	// lineair door de array lopen?
+	// for-loop?
+	// voorrangsregels nog negeren, komt later, eventueel.
+}
